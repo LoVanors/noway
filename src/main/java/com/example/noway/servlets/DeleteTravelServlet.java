@@ -1,7 +1,5 @@
 package com.example.noway.servlets;
 
-import com.example.noway.models.dtos.ConnectedUserDTO;
-import com.example.noway.models.entities.Customer;
 import com.example.noway.services.CustomerService;
 import com.example.noway.services.Impl.CustomerServiceImpl;
 import jakarta.inject.Inject;
@@ -16,8 +14,8 @@ import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
 
-@WebServlet(name="login", urlPatterns = "/login")
-public class LoginServlet extends HttpServlet {
+@WebServlet(name = "deleteTravel",urlPatterns = "/deleteTravel")
+public class DeleteTravelServlet extends HttpServlet {
 
     protected EntityManagerFactory emf;
     protected EntityManager em;
@@ -29,30 +27,15 @@ public class LoginServlet extends HttpServlet {
     public void init() throws ServletException {
         customerService = new CustomerServiceImpl();
     }
-
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        request.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(request, response);
+        request.getRequestDispatcher("/WEB-INF/pages/deleteTravel.jsp").forward(request, response);
 
     }
 
     @Override
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-        String username = request.getParameter("username");
-        String password = request.getParameter("password");
-
-
-
-        try {
-            Customer newCustomer=new Customer(username,password);
-            Customer customer = customerService.login(newCustomer);
-            request.getSession(true).setAttribute("connectedUser", ConnectedUserDTO.fromEntity(customer));
-
-            response.sendRedirect(request.getContextPath() + "/index.jsp");
-        } catch (Exception e) {
-
-            request.setAttribute("errorMessage", "Mot de passe non valide");
-            request.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(request, response);
-        }
+//méthode de suppression de voyage (un à la fois) dans les tables travel et booking
     }
+
 }

@@ -11,11 +11,13 @@ import lombok.*;
 public class ConnectedUserDTO {
     private Long id;
     private String username;
+    private Boolean isAdmin;
 
     public static ConnectedUserDTO fromEntity(Customer customer){
         return ConnectedUserDTO.builder()
                 .id(customer.getId())
                 .username(customer.getUsername())
+                .isAdmin(customer.getIsAdmin())
                 .build();
     }
 }

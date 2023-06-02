@@ -27,13 +27,26 @@ public class Travel {
     @Column(name = "START_DATE")
     private LocalDate startDate;
     @Column(name = "PRICE")
-    private BigDecimal price;
+    private Double price;
+    @Column(name = "image")
+    private String image;
 
-    public Travel(String destination, String description, LocalDate endDate, LocalDate startDate, BigDecimal price){
+    public Travel(String destination, String description, LocalDate startDate, LocalDate endDate,  Double price, String image){
         this.description=description;
         this.destination=destination;
         this.endDate=endDate;
         this.startDate=startDate;
         this.price=price;
+        this.image=image;
     }
+    public Travel(String destination, String description, LocalDate startDate, LocalDate endDate,  Double price){
+        this.description=description;
+        this.destination=destination;
+        this.endDate=endDate;
+        this.startDate=startDate;
+        this.price=price;
+        this.image="aucun image disponible";
+    }
+
+
 }

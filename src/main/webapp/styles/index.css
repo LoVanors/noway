@@ -1,0 +1,75 @@
+header {
+    width: 100%;
+    background-image: url("../images/logo.jpg");
+    background-size: cover;
+    height: 20px;
+}
+
+h1 {
+    font-family: 'Explora', cursive;
+    color: yellow;
+    font-size: 55px;
+
+}
+
+h2 {
+    text-align: center;
+}
+
+.bout{
+    color: whitesmoke;
+    text-decoration: none;
+
+}
+
+.principal {
+    color: black;
+    text-decoration: none;
+}
+
+.menu {
+}
+
+.principal:hover {
+    color: yellow;
+}
+
+.row>div {
+    background-color: black;
+}
+
+.espace {
+    background-image: url("../images/playa bianca.jpg");
+    height: 600px;
+    width: 60%;
+    border: solid 1px black;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-attachment: inherit;
+    background-position: center;
+}
+.espace2 {
+    background-image: url("../images/MacchuPicchu.jpg");
+    height: 600px;
+    width: 60%;
+    border: solid 1px black;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-size: cover ;
+    background-attachment: inherit;
+    background-position: center;
+}
+.prespace {
+}
+
+.fond {
+}
+
+.desc {
+    height: 50vh;
+    font-size: large;
+    color: yellow;
+    width: 70%;
+    margin: auto;
+}

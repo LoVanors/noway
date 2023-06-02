@@ -42,6 +42,9 @@ public class CustomerServiceImpl implements CustomerService, Serializable {
         if (customer.getUsername().trim().equals("")){
             throw new RuntimeException();
         }
+        if (customer.getEmail().trim().equals("")){
+            throw new RuntimeException();
+        }
         if (customer.getPassword().trim().equals("")){
             throw new RuntimeException();
         }
