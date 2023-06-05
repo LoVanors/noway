@@ -43,6 +43,16 @@ public class BaseRepositoryImpl<TEntity> implements BaseRepository<TEntity> {
         et.commit();
     }
 
+    @Override
+    public void delete(TEntity entity) {
+        et.begin();
+
+        em.remove(em.merge(entity));
+
+        et.commit();
+
+    }
+
     public EntityManager getEm() {
         return em;
     }

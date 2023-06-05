@@ -18,12 +18,13 @@
     <title>Gestion</title>
 </head>
 <body>
+<%if (session.getAttribute("connectedUser") != null) {%> <h2>
+    Bienvenue ${connectedUser.username}</h2><%}%>
 <form class="d-flex" role="search">
-    <button class="btn btn btn-info me-1 " type="submit" formaction="manageTravel">Gestion des voyages</button>
-    <button class="btn btn btn-info  me-1 " type="submit" formaction="manageAdmin">Gestion des admins</button>
-    <button class="btn btn btn-info  me-1 " type="submit" formaction="manageAccount">Gestion du compte</button>
-    <p>-retour</p>
-    <button class="btn btn btn-Success  me-1 " type="submit" formaction="index">Accueil</button>
+    <button class="btn btn btn-info me-1 " type="submit" formaction="manageTravel">Gestion des voyages</button><br><br>
+    <button class="btn btn btn-info  me-1 " type="submit" formaction="manageAdmin">Gestion des admins</button><br><br>
+    <button class="btn btn btn-info  me-1 " type="submit" formaction="manageAccount">Gestion du compte</button><br><br>
+    <button class="btn btn btn-Success  me-1 " type="submit" formaction="index">Accueil</button><br><br>
 
 </form>
 </body>

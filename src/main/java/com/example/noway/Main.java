@@ -2,6 +2,8 @@ package com.example.noway;
 
 import com.example.noway.models.entities.Customer;
 import com.example.noway.models.entities.Travel;
+import com.example.noway.repositories.CustomerRepository;
+import com.example.noway.repositories.Impl.CustomerRepositoryImpl;
 import com.example.noway.services.CustomerService;
 import com.example.noway.services.Impl.CustomerServiceImpl;
 import com.example.noway.services.Impl.TravelServiceImpl;
@@ -9,10 +11,12 @@ import com.example.noway.services.TravelService;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
+import java.util.List;
 
 public class Main {
     public static void main(String[] args) {
-//        CustomerService customerService = new CustomerServiceImpl();
+        CustomerService customerService = new CustomerServiceImpl();
+        CustomerRepository customerRepository = new CustomerRepositoryImpl();
 //
 //        Customer customer=Customer.builder()
 //                .username("a")
@@ -31,6 +35,12 @@ public class Main {
 //                .image("images/logo.jpg")
 //                .build();
 //        travelService.add(travel);
+
+        List<Customer> customerList=customerRepository.getAll();
+        for (Customer cus: customerList) {
+            System.out.println(cus.toString());
+
+        }
     }
 
 }

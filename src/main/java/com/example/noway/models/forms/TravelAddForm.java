@@ -18,7 +18,7 @@ public class TravelAddForm {
     private String destination;
     private LocalDate endDate;
     private LocalDate startDate;
-    private Double price;
+    private BigDecimal price;
     private String image;
 
     public Travel toEntity(){

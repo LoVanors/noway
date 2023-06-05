@@ -13,4 +13,6 @@ public interface BaseRepository<TEntity> {
 
     void update(TEntity entity);
 
+    void delete(TEntity entity);
+
 }

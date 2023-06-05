@@ -4,7 +4,6 @@ import com.example.noway.exceptions.EntityNotFoundException;
 import com.example.noway.exceptions.InvalidPasswordException;
 import com.example.noway.models.entities.Customer;
 import com.example.noway.repositories.CustomerRepository;
-import com.example.noway.repositories.Impl.CustomerRepositoryImpl;
 import com.example.noway.services.CustomerService;
 import jakarta.enterprise.context.SessionScoped;
 import jakarta.inject.Inject;
@@ -18,11 +17,7 @@ import java.io.Serializable;
 public class CustomerServiceImpl implements CustomerService, Serializable {
 
     @Inject
-    private CustomerRepository customerRepository;
-
-    public CustomerServiceImpl() {
-        this.customerRepository = new CustomerRepositoryImpl();
-    }
+    CustomerRepository customerRepository;
 
     @Override
     public Customer login(Customer newCustomer) {
@@ -31,8 +26,9 @@ public class CustomerServiceImpl implements CustomerService, Serializable {
         if (customer == null) {
             throw new EntityNotFoundException("ce compte n'existe pas");
         }
-        if (!BCrypt.checkpw(newCustomer.getPassword(), customer.getPassword())) {
-            throw new InvalidPasswordException("mot de passe erroné");
+        //if (!BCrypt.checkpw(newCustomer.getPassword(), customer.getPassword())) //ne fonctionne pas, pourquoi?
+        if (!BCrypt.checkpw(newCustomer.getPassword(), customerRepository.findByUsername(login).getPassword())) {
+            throw new InvalidPasswordException("mot de passe invalide");
         }
         return customer;
     }
@@ -52,4 +48,12 @@ public class CustomerServiceImpl implements CustomerService, Serializable {
         customerRepository.add(customer);
         return customer;
     }
+
+    @Override
+    public Customer delete(Customer customer) {
+        customerRepository.delete(customer);
+        return null;
+    }
+
+
 }

@@ -1,4 +1,5 @@
-<%--
+<%@ page import="com.example.noway.models.entities.Customer" %>
+<%@ page import="com.example.noway.models.dtos.ConnectedUserDTO" %><%--
   Created by IntelliJ IDEA.
   User: loicv
   Date: 02-06-23
@@ -18,11 +19,22 @@
     <title>Suppression de compte</title>
 </head>
 <body>
+<% if (session.getAttribute("connectedUser") != null) {
+    // Cast de l'objet connectedUser vers la classe appropriée (par exemple, User)
+    ConnectedUserDTO connectedUser = (ConnectedUserDTO) session.getAttribute("connectedUser");
+%>
+<% } %>
+<%if (session.getAttribute("connectedUser") != null) {%> <h2>
+    Bienvenue ${connectedUser.username}</h2><%}%>
 <p>demande de validation</p>
-<p>"entrez supprimer"</p>
+<form method="post" action="deleteAccount">
+    <p>Pour supprimer votre compte, écrire : supprimer ${connectedUser.username}</p>
+    <input type="confirmation" name="confirmation" id="confirmation" value="${confirmation}">
+    <span style="color: red">${errorMessage}</span>
+    <button type="submit">Supprimer</button>
+</form>
 <p>si texte exact, suppression du compte</p>
 <form class="d-flex" role="search">
-    <p>-retour</p>
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="index">Accueil</button>
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="manageAccount">Retour</button>
 </form>

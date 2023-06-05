@@ -24,7 +24,6 @@ public class IndexServlet extends HttpServlet {
     CustomerService customerService;
     @Override
     public void init() throws ServletException {
-        customerService = new CustomerServiceImpl();
     }
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

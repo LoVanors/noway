@@ -18,13 +18,14 @@
     <title>Gestion du profile</title>
 </head>
 <body>
-<p>formulaires de gestion du compte:</p>
+<br><br><%if (session.getAttribute("connectedUser") != null) {%> <h2>
+    Bienvenue ${connectedUser.username}</h2><%}%>
 <form class="d-flex" role="search">
-    <p>-modifier infos</p>
-    <button class="btn btn btn-info me-1 " type="submit" formaction="manageTravel">Gestion des voyages</button>
-    <p>-supprimer compte</p>
-    <button class="btn btn btn-Danger  me-1 " type="submit" formaction="manageAdmin">Gestion des admins</button>
-    <p>-retour</p>
+
+    <button class="btn btn btn-info me-1 " type="submit" formaction="updateAccount">Modifier le compte</button>
+    <br><br>
+    <button class="btn btn btn-Danger  me-1 " type="submit" formaction="deleteAccount">Supprimer le compte</button>
+    <br><br>
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="index">Accueil</button>
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="manage">Retour</button>
 </form>

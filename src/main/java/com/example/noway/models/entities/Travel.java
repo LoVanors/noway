@@ -27,11 +27,11 @@ public class Travel {
     @Column(name = "START_DATE")
     private LocalDate startDate;
     @Column(name = "PRICE")
-    private Double price;
+    private BigDecimal price;
     @Column(name = "image")
     private String image;
 
-    public Travel(String destination, String description, LocalDate startDate, LocalDate endDate,  Double price, String image){
+    public Travel(String destination, String description, LocalDate startDate, LocalDate endDate,  BigDecimal price, String image){
         this.description=description;
         this.destination=destination;
         this.endDate=endDate;
@@ -39,7 +39,7 @@ public class Travel {
         this.price=price;
         this.image=image;
     }
-    public Travel(String destination, String description, LocalDate startDate, LocalDate endDate,  Double price){
+    public Travel(String destination, String description, LocalDate startDate, LocalDate endDate,  BigDecimal price){
         this.description=description;
         this.destination=destination;
         this.endDate=endDate;

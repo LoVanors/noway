@@ -18,6 +18,8 @@
     <title>Modification des voyages</title>
 </head>
 <body>
+<%if (session.getAttribute("connectedUser") != null) {%> <h2>
+    Bienvenue ${connectedUser.username}</h2><%}%>
 <p>affichage de la liste des voyages</p>
 <p>cocher le voyage à modifier</p>
 <p>entrer les infos à modifier</p>

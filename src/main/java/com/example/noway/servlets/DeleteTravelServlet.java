@@ -1,7 +1,9 @@
 package com.example.noway.servlets;
 
+import com.example.noway.models.entities.Travel;
 import com.example.noway.services.CustomerService;
 import com.example.noway.services.Impl.CustomerServiceImpl;
+import com.example.noway.services.TravelService;
 import jakarta.inject.Inject;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.EntityManagerFactory;
@@ -22,10 +24,9 @@ public class DeleteTravelServlet extends HttpServlet {
     protected EntityTransaction et;
 
     @Inject
-    CustomerService customerService;
+    TravelService travelService;
     @Override
     public void init() throws ServletException {
-        customerService = new CustomerServiceImpl();
     }
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {

@@ -1,3 +1,4 @@
+<%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
 <%--
   Created by IntelliJ IDEA.
   User: loicv
@@ -17,12 +18,33 @@
     <link rel="stylesheet" href="styles/index.css">
     <title>Gestion des admins</title>
 </head>
+<body>
+<%if (session.getAttribute("connectedUser") != null) {%> <h2>
+    Bienvenue ${connectedUser.username}</h2><%}%>
 <p>
 <p>-affichage des comptes</p>
 <p>-cocher</p>
 <p>la validation définira le/les comptes cochés comme admin</p>
-<form class="d-flex" role="search">
-    <p>-retour</p>
+<form method="post" enctype="text/plain">
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>nom d'utilisateur</th>
+            <th>email</th>
+            <th>admin</th>
+        </tr>
+        <c:forEach var="customer" items="${customerList}">
+            <tr>
+                <td>${customer.id}</td>
+                <td>${customer.username}</td>
+                <td>${customer.email}</td>
+                <td>
+                    <input type="checkbox" name="setAdmin" value="${customer.id}" ${customer.isAdmin ? 'checked' : ''}>
+                </td>
+            </tr>
+        </c:forEach>
+    </table>
+    <input type="submit" value="définir les admins"><br><br>
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="index">Accueil</button>
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="manage">Retour</button>
 </form>

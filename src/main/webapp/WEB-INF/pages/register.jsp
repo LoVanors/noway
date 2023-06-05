@@ -31,7 +31,6 @@
     <button class="btn btn btn-Primary  me-1 " type="submit">Valider</button>
 </form>
 <form class="d-flex" role="search">
-    <p>-retour</p>
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="index">Accueil</button>
 </form>
 </body>

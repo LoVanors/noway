@@ -18,6 +18,8 @@
     <title>ajout de voyage</title>
 </head>
 <body>
+<%if (session.getAttribute("connectedUser") != null) {%> <h2>
+    Bienvenue ${connectedUser.username}</h2><%}%>
 <p>formulaire permettant d'ajouter un voyage</p>
 <form action="addTravel" method="post" enctype="multipart/form-data">
     <label for="destination">Destination:</label>
@@ -26,8 +28,8 @@
     <label for="description">Description:</label>
     <textarea id="description" name="description" rows="4" cols="50" value="${description}" required></textarea><br><br>
 
-    <label for="prix">Prix:</label>
-    <input type="number" id="prix" name="prix" value="${price}" required><br><br>
+    <label for="price">Prix:</label>
+    <input type="text" id="price" name="price" value="${price}" required><br><br>
 
     <label for="dateDebut">Date de début:</label>
     <input type="date" id="dateDebut" name="dateDebut" value="${startDate}" required><br><br>
@@ -35,8 +37,7 @@
     <label for="dateFin">Date de fin:</label>
     <input type="date" id="dateFin" name="dateFin" value="${endDate}" required><br><br>
 
-    <label for="image">Image:</label>
-    <input type="file" id="image" name="image" accept="image/*" value="${image}" required><br><br>
+    <input type="file"  name="image" accept="image/*" value="${image}" ><br><br>
 
     <input type="submit" value="Ajouter">
 </form>

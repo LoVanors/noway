@@ -27,7 +27,6 @@ public class LoginServlet extends HttpServlet {
     CustomerService customerService;
     @Override
     public void init() throws ServletException {
-        customerService = new CustomerServiceImpl();
     }
 
     @Override
@@ -51,7 +50,7 @@ public class LoginServlet extends HttpServlet {
             response.sendRedirect(request.getContextPath() + "/index.jsp");
         } catch (Exception e) {
 
-            request.setAttribute("errorMessage", "Mot de passe non valide");
+            request.setAttribute("errorMessage", e.getMessage());
             request.getRequestDispatcher("/WEB-INF/pages/login.jsp").forward(request, response);
         }
     }

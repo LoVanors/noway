@@ -52,20 +52,19 @@ public class AddTravelServlet extends HttpServlet {
 
         String destination = request.getParameter("destination");
         String description = request.getParameter("description");
-        Double price = Double.parseDouble(request.getParameter("price"));
+        String price = request.getParameter("price");
         String startDate = request.getParameter("startDate");
         String endDate = request.getParameter("endDate");
-
 
         Part imagePart = request.getPart("image");
         String imageName = imagePart.getSubmittedFileName();
         InputStream imageStream = imagePart.getInputStream();
 
+        Path imageDirectory = Paths.get(getServletContext().getRealPath("/images"), imageName);
+        Files.createDirectories(imageDirectory.getParent());
+        Files.copy(imageStream, imageDirectory, StandardCopyOption.REPLACE_EXISTING);
 
-         Path imageDirectory = Paths.get("images/", imageName);
-         Files.copy(imageStream, imageDirectory, StandardCopyOption.REPLACE_EXISTING);
-
-        Travel travel=new Travel(destination ,description ,LocalDate.parse(endDate) ,LocalDate.parse(startDate) , price,imageName);
+        Travel travel=new Travel(destination ,description ,LocalDate.parse(endDate) ,LocalDate.parse(startDate) , BigDecimal.valueOf(Long.parseLong(price)),imageName);
 
         try {
             travelService.add(travel);
@@ -75,7 +74,7 @@ public class AddTravelServlet extends HttpServlet {
             return;
         }
 
-        response.sendRedirect("manageTravel.jsp");
+        response.sendRedirect("/WEB-INF/pages/manageTravel.jsp");
     }
 }
 

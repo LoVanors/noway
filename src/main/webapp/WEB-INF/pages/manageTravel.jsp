@@ -17,15 +17,17 @@
     <link rel="stylesheet" href="styles/index.css">
     <title>Gestion des voyages</title>
 </head>
-<body><form class="d-flex" role="search">
-    <p>formulaires de gestion des voyages:</p>
-    <p>-ajouter</p>
-    <button class="btn btn btn-info me-1 " type="submit" formaction="addTravel">ajouter un voyage</button>
-    <p>-modifier</p>
-    <button class="btn btn btn-info  me-1 " type="submit" formaction="updateTravel">modifier un voyage</button>
-    <p>-supprimer</p>
-    <button class="btn btn btn-info  me-1 " type="submit" formaction="deleteTravel">supprimer un ou plusieurs voyages</button>
-    <p>-retour</p>
+<body>
+<%if (session.getAttribute("connectedUser") != null) {%> <h2>
+    Bienvenue ${connectedUser.username}</h2><%}%>
+<form class="d-flex" role="search">
+
+    <button class="btn btn btn-info me-1 " type="submit" formaction="addTravel">ajouter un voyage</button><br><br>
+
+    <button class="btn btn btn-info  me-1 " type="submit" formaction="updateTravel">modifier un voyage</button><br><br>
+
+    <button class="btn btn btn-info  me-1 " type="submit" formaction="deleteTravel">supprimer un ou plusieurs voyages</button><br><br>
+
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="index">Accueil</button>
     <button class="btn btn btn-Success  me-1 " type="submit" formaction="manage">Retour</button>
 </form>
