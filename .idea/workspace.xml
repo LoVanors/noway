@@ -9,20 +9,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="f9628088-e697-406c-a985-e57434f1bfac" name="Changes" comment="création des servlets et des jsp teminée(à priori)&#10;-problème connection addTravel">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/palpatine.jpg" afterDir="false" />
+    <list default="true" id="f9628088-e697-406c-a985-e57434f1bfac" name="Changes" comment="voila voila">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/models/entities/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/models/entities/Customer.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/models/forms/TravelAddForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/models/forms/TravelAddForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/AddTravelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/AddTravelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/IndexServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageAdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageAdminServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageTravelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageTravelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/RegisterServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/UpdateAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/UpdateAccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/addTravel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/addTravel.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manageAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manageAdmin.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -220,7 +210,7 @@
       <workItem from="1685686839378" duration="22846000" />
       <workItem from="1685965423530" duration="620000" />
       <workItem from="1685966072259" duration="24115000" />
-      <workItem from="1686033204943" duration="14982000" />
+      <workItem from="1686033204943" duration="20400000" />
     </task>
     <task id="LOCAL-00001" summary="java.lang.ExceptionInInitializerError">
       <created>1685565005158</created>
@@ -236,7 +226,14 @@
       <option name="project" value="LOCAL" />
       <updated>1685709671787</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="voila voila">
+      <created>1686055483406</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1686055483406</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -257,17 +254,7 @@
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="java.lang.ExceptionInInitializerError" />
     <MESSAGE value="création des servlets et des jsp teminée(à priori)&#10;-problème connection addTravel" />
-    <option name="LAST_COMMIT_MESSAGE" value="création des servlets et des jsp teminée(à priori)&#10;-problème connection addTravel" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="java-line">
-          <url>file://$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageAdminServlet.java</url>
-          <line>56</line>
-          <option name="timeStamp" value="6" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
+    <MESSAGE value="voila voila" />
+    <option name="LAST_COMMIT_MESSAGE" value="voila voila" />
   </component>
 </project>

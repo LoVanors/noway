@@ -32,9 +32,6 @@ public class ManageAdminServlet extends HttpServlet {
     @Inject
     CustomerRepository customerRepository;
 
-    @Override
-    public void init() throws ServletException {
-    }
 
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -47,20 +44,20 @@ public class ManageAdminServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //méthode d'ajout d'admin (un ou plusieurs)
         List<Customer> customerList = customerRepository.getAll();
-        for (Customer customer : customerList){
-            String setAdminValue = request.getParameter("setAdmin"+customer.getId());
-
-            String username=customer.getUsername();
-            String email=customer.getEmail();
-            String password=customer.getPassword();
-            boolean isAdmin=customer.getIsAdmin();
-            if (setAdminValue!=null){
-                 isAdmin=true;
+        String[] setAdminValues= request.getParameterValues("isAdminCB");
+        System.out.println(setAdminValues);
+        if (setAdminValues!=null) {
+            for (Customer customer : customerList) {
+                String customerId = String.valueOf(customer.getId());
+                System.out.println(customerId);
+                boolean isAdmin=Arrays.asList(setAdminValues).contains(customerId);
+                System.out.println(isAdmin);
+                if (customer.getIsAdmin()!=isAdmin){
+                    customer.setIsAdmin(isAdmin);
+                    customerRepository.update(customer);
+                }
             }
-            Customer updatedCustomer=new Customer(username,email,password,isAdmin);
-            customerRepository.update(updatedCustomer);
         }
-
         request.getRequestDispatcher("/WEB-INF/pages/manage.jsp").forward(request, response);
     }
 

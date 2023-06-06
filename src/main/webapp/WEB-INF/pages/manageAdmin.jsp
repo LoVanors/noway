@@ -21,11 +21,7 @@
 <body>
 <%if (session.getAttribute("connectedUser") != null) {%> <h2>
     Bienvenue ${connectedUser.username}</h2><%}%>
-<p>
-<p>-affichage des comptes</p>
-<p>-cocher</p>
-<p>la validation définira le/les comptes cochés comme admin</p>
-<form method="post" enctype="text/plain">
+<form method="post" action="manageAdmin">
     <table>
         <tr>
             <th>ID</th>
@@ -39,7 +35,7 @@
                 <td>${customer.username}</td>
                 <td>${customer.email}</td>
                 <td>
-                    <input type="checkbox" name="setAdmin${customer.id}" value="${customer.id}" ${customer.isAdmin ? 'checked' : ''}>
+                    <input type="checkbox" name="isAdminCB" value="${customer.id}" ${customer.isAdmin? 'checked' : ''}>
                 </td>
             </tr>
         </c:forEach>
