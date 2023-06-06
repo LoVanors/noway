@@ -59,7 +59,7 @@ public class UpdateAccountServlet extends HttpServlet {
         String email=request.getParameter("email");
         String password=request.getParameter("password");
         String confirmedPassword=request.getParameter("confirmedPassword");
-        Boolean isAdmin = customer.getIsAdmin();
+        Boolean isAdmin = request.getParameter("setAdmin").equals(customer.getId());
         if (username.trim().equals("")){
             username=customer.getUsername();
         }
@@ -71,6 +71,9 @@ public class UpdateAccountServlet extends HttpServlet {
         }
         if (!password.equals(confirmedPassword)){
             throw new InvalidPasswordException();
+        }
+        if (isAdmin==null){
+            isAdmin=customer.getIsAdmin();
         }
 
         Customer updatedCustomer= new Customer(customer.getId(),username,email,password,isAdmin);

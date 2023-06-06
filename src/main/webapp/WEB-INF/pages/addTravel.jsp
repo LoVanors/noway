@@ -31,11 +31,11 @@
     <label for="price">Prix:</label>
     <input type="text" id="price" name="price" value="${price}" required><br><br>
 
-    <label for="dateDebut">Date de début:</label>
-    <input type="date" id="dateDebut" name="dateDebut" value="${startDate}" required><br><br>
+    <label for="startDate">Date de début:</label>
+    <input type="date" id="startDate" name="startDate" value="${startDate}" required><br><br>
 
-    <label for="dateFin">Date de fin:</label>
-    <input type="date" id="dateFin" name="dateFin" value="${endDate}" required><br><br>
+    <label for="endDate">Date de fin:</label>
+    <input type="date" id="endDate" name="endDate" value="${endDate}" required><br><br>
 
     <input type="file"  name="image" accept="image/*" value="${image}" ><br><br>
 

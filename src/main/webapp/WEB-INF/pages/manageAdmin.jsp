@@ -39,7 +39,7 @@
                 <td>${customer.username}</td>
                 <td>${customer.email}</td>
                 <td>
-                    <input type="checkbox" name="setAdmin" value="${customer.id}" ${customer.isAdmin ? 'checked' : ''}>
+                    <input type="checkbox" name="setAdmin${customer.id}" value="${customer.id}" ${customer.isAdmin ? 'checked' : ''}>
                 </td>
             </tr>
         </c:forEach>

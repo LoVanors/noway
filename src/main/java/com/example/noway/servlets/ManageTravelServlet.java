@@ -30,4 +30,8 @@ public class ManageTravelServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/pages/manageTravel.jsp").forward(request, response);
     }
+    @Override
+    public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+        request.getRequestDispatcher("/WEB-INF/pages/manageTravel.jsp").forward(request, response);
+    }
 }

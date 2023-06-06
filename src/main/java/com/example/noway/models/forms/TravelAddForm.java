@@ -16,8 +16,8 @@ import java.time.LocalDate;
 public class TravelAddForm {
     private String description;
     private String destination;
-    private LocalDate endDate;
     private LocalDate startDate;
+    private LocalDate endDate;
     private BigDecimal price;
     private String image;
 
@@ -25,8 +25,8 @@ public class TravelAddForm {
         return Travel.builder()
                 .description(getDescription())
                 .destination(getDestination())
-                .endDate(getEndDate())
                 .startDate(getStartDate())
+                .endDate(getEndDate())
                 .price(getPrice())
                 .image(getImage())
                 .build();

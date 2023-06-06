@@ -10,33 +10,20 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="f9628088-e697-406c-a985-e57434f1bfac" name="Changes" comment="création des servlets et des jsp teminée(à priori)&#10;-problème connection addTravel">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/updateAccount.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/images/palpatine.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/Main.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/models/dtos/ConnectedUserDTO.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/models/dtos/ConnectedUserDTO.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/models/entities/Travel.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/models/entities/Travel.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/models/entities/Customer.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/models/entities/Customer.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/models/forms/TravelAddForm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/models/forms/TravelAddForm.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/repositories/BaseRepository.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/repositories/BaseRepository.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/repositories/Impl/BaseRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/repositories/Impl/BaseRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/repositories/Impl/CustomerRepositoryImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/repositories/Impl/CustomerRepositoryImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/services/CustomerService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/services/CustomerService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/services/Impl/CustomerServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/services/Impl/CustomerServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/AddTravelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/AddTravelServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/DeleteAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/DeleteAccountServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/DeleteTravelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/DeleteTravelServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/IndexServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/IndexServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageAccountServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageAdminServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageAdminServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageTravelServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageTravelServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/RegisterServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/RegisterServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/UpdateAccountServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/noway/servlets/UpdateAccountServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/META-INF/persistence.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/addTravel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/addTravel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/deleteAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/deleteAccount.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manage.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manage.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manageAccount.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manageAccount.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manageAdmin.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manageAdmin.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manageTravel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/manageTravel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/register.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/updateTravel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/pages/updateTravel.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,7 +47,7 @@
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
     <option name="FILTER_WARNINGS" value="false" />
-    <option name="FILTER_INFO" value="false" />
+    <option name="FILTER_INFO" value="true" />
     <option name="FILTER_DEBUG" value="true" />
     <option name="CUSTOM_FILTER" />
   </component>
@@ -86,11 +73,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "master",
     "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/studentdev09/Desktop/java/noway",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -109,7 +98,7 @@
   }
 }]]></component>
   <component name="RunManager">
-    <configuration name="TomEE 10.0.27" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 10.0.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="20" nameIsGenerated="true">
+    <configuration name="TomEE 10.0.27" type="TomeeConfiguration" factoryName="Local" APPLICATION_SERVER_NAME="TomEE 10.0.27" ALTERNATIVE_JRE_ENABLED="true" ALTERNATIVE_JRE_PATH="19" nameIsGenerated="true">
       <option name="OPEN_IN_BROWSER_URL" value="http://localhost:8080/noway" />
       <option name="UPDATE_ON_FRAME_DEACTIVATION" value="true" />
       <option name="UPDATE_CLASSES_ON_FRAME_DEACTIVATION" value="true" />
@@ -122,8 +111,7 @@
         </artifact>
       </deployment>
       <server-settings>
-        <option name="BASE_DIRECTORY_NAME" value="30bee331-bd67-4dfd-a08a-b981866bb0c5" />
-        <option name="PRESERVE_SESSIONS" value="true" />
+        <option name="BASE_DIRECTORY_NAME" value="01aefc51-c7ba-4fa6-a3ac-e8648ffe11f9" />
       </server-settings>
       <predefined_log_file enabled="true" id="Tomcat" />
       <predefined_log_file enabled="true" id="Tomcat Catalina" />
@@ -131,7 +119,7 @@
       <predefined_log_file id="Tomcat Host Manager" />
       <predefined_log_file id="Tomcat Localhost Access" />
       <RunnerSettings RunnerId="Debug">
-        <option name="DEBUG_PORT" value="51329" />
+        <option name="DEBUG_PORT" value="65296" />
       </RunnerSettings>
       <ConfigurationWrapper VM_VAR="JAVA_OPTS" RunnerId="Cover">
         <option name="USE_ENV_VARIABLES" value="true" />
@@ -200,7 +188,7 @@
         </option>
       </method>
     </configuration>
-    <configuration default="true" type="#com.intellij.j2ee.web.tomcat.TomcatRunConfigurationFactory" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
+    <configuration default="true" type="TomeeConfiguration" factoryName="Local" ALTERNATIVE_JRE_ENABLED="false">
       <deployment />
       <server-settings />
       <predefined_log_file enabled="true" id="Tomcat" />
@@ -232,6 +220,7 @@
       <workItem from="1685686839378" duration="22846000" />
       <workItem from="1685965423530" duration="620000" />
       <workItem from="1685966072259" duration="24115000" />
+      <workItem from="1686033204943" duration="14982000" />
     </task>
     <task id="LOCAL-00001" summary="java.lang.ExceptionInInitializerError">
       <created>1685565005158</created>
@@ -269,5 +258,16 @@
     <MESSAGE value="java.lang.ExceptionInInitializerError" />
     <MESSAGE value="création des servlets et des jsp teminée(à priori)&#10;-problème connection addTravel" />
     <option name="LAST_COMMIT_MESSAGE" value="création des servlets et des jsp teminée(à priori)&#10;-problème connection addTravel" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/com/example/noway/servlets/ManageAdminServlet.java</url>
+          <line>56</line>
+          <option name="timeStamp" value="6" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

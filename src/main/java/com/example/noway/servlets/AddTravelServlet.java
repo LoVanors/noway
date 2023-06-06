@@ -7,6 +7,7 @@ import com.example.noway.services.Impl.TravelServiceImpl;
 import com.example.noway.services.TravelService;
 import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
+import jakarta.servlet.annotation.MultipartConfig;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
 import jakarta.servlet.http.HttpServletRequest;
@@ -26,20 +27,18 @@ import java.sql.PreparedStatement;
 import java.sql.SQLException;
 import java.time.LocalDate;
 
-@WebServlet(name = "addTravel", urlPatterns = "/addTravel")
+@WebServlet(name = "addTravel", urlPatterns = "/addTravel") @MultipartConfig
 public class AddTravelServlet extends HttpServlet {
     private static final String DB_URL = "jdbc:postgresql://localhost:5432/noway";
     private static final String DB_USER = "postgres";
     private static final String DB_PASSWORD = "postgre";
-    private TravelService travelService;
     @Inject
-    CustomerService customerService;
+    private TravelService travelService;
+
 
     @Override
     public void init() throws ServletException {
 
-        customerService = new CustomerServiceImpl();
-        travelService = new TravelServiceImpl();
     }
 
     @Override
@@ -54,27 +53,29 @@ public class AddTravelServlet extends HttpServlet {
         String description = request.getParameter("description");
         String price = request.getParameter("price");
         String startDate = request.getParameter("startDate");
+        LocalDate parsedStartDate = LocalDate.parse(startDate);
         String endDate = request.getParameter("endDate");
+        LocalDate parsedEndDate = LocalDate.parse(endDate);
 
         Part imagePart = request.getPart("image");
         String imageName = imagePart.getSubmittedFileName();
         InputStream imageStream = imagePart.getInputStream();
 
-        Path imageDirectory = Paths.get(getServletContext().getRealPath("/images"), imageName);
+        Path imageDirectory = Paths.get("C:\\Users\\studentdev09\\Desktop\\java\\noway\\src\\main\\webapp\\images\\"+ imageName);
         Files.createDirectories(imageDirectory.getParent());
-        Files.copy(imageStream, imageDirectory, StandardCopyOption.REPLACE_EXISTING);
 
-        Travel travel=new Travel(destination ,description ,LocalDate.parse(endDate) ,LocalDate.parse(startDate) , BigDecimal.valueOf(Long.parseLong(price)),imageName);
+        Travel travel=new Travel(destination ,description ,parsedStartDate ,parsedEndDate , BigDecimal.valueOf(Long.parseLong(price)),imageName);
 
         try {
             travelService.add(travel);
+            Files.copy(imageStream, imageDirectory, StandardCopyOption.REPLACE_EXISTING);
         } catch (Exception e) {
             request.setAttribute("errorMessage",  e.getMessage());
             request.getRequestDispatcher("/WEB-INF/pages/addTravel.jsp").forward(request, response);
             return;
         }
 
-        response.sendRedirect("/WEB-INF/pages/manageTravel.jsp");
+        request.getRequestDispatcher("/WEB-INF/pages/manageTravel.jsp").forward(request,response);
     }
 }
 

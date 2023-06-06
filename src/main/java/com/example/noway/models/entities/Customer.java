@@ -46,4 +46,10 @@ public class Customer implements Serializable {
         this.isAdmin = false;
     }
 
+    public Customer(String username, String email, String password, boolean isAdmin) {
+        this.username = username;
+        this.email=email;
+        this.password = password;
+        this.isAdmin = isAdmin;
+    }
 }

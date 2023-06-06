@@ -4,6 +4,7 @@ import com.example.noway.models.entities.Customer;
 import com.example.noway.models.forms.CustomerRegisterForm;
 import com.example.noway.services.CustomerService;
 import com.example.noway.services.Impl.CustomerServiceImpl;
+import jakarta.inject.Inject;
 import jakarta.servlet.ServletException;
 import jakarta.servlet.annotation.WebServlet;
 import jakarta.servlet.http.HttpServlet;
@@ -20,12 +21,13 @@ import java.util.Set;
 
 @WebServlet(name = "register", urlPatterns = "/register")
 public class RegisterServlet extends HttpServlet {
+    @Inject
+    CustomerService customerService;
 
-    private CustomerService customerService;
     @Override
     public void init() throws ServletException {
-        customerService = new CustomerServiceImpl();
     }
+
     @Override
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
         request.getRequestDispatcher("/WEB-INF/pages/register.jsp").forward(request, response);
@@ -53,14 +55,14 @@ public class RegisterServlet extends HttpServlet {
         if (!violations.isEmpty()) {
             StringBuilder errorMessage = new StringBuilder();
             for (ConstraintViolation<CustomerRegisterForm> violation : violations) {
-                if (violation.getPropertyPath().toString().equals("email")){
-                    request.setAttribute("errorMessage","Email invalide");
+                if (violation.getPropertyPath().toString().equals("email")) {
+                    request.setAttribute("errorMessage", "Email invalide");
                 }
-                if (violation.getPropertyPath().toString().equals("username")){
-                    request.setAttribute("errorMessage","Nom d'utilisateur invalide");
+                if (violation.getPropertyPath().toString().equals("username")) {
+                    request.setAttribute("errorMessage", "Nom d'utilisateur invalide");
                 }
-                if (violation.getPropertyPath().toString().equals("password")){
-                    request.setAttribute("errorMessage","Mot de passe invalide");
+                if (violation.getPropertyPath().toString().equals("password")) {
+                    request.setAttribute("errorMessage", "Mot de passe invalide");
                 }
             }
             request.getRequestDispatcher("/WEB-INF/pages/register.jsp").forward(request, response);
@@ -72,7 +74,7 @@ public class RegisterServlet extends HttpServlet {
         try {
             customerService.register(newCustomer);
         } catch (Exception e) {
-            request.setAttribute("errorMessage",  e.getMessage());
+            request.setAttribute("errorMessage", e.getMessage());
             request.getRequestDispatcher("/WEB-INF/pages/register.jsp").forward(request, response);
             return;
         }

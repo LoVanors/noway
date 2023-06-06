@@ -15,7 +15,11 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
+import java.util.stream.Collectors;
 
 @WebServlet(name = "manageAdmin", urlPatterns = "/manageAdmin")
 public class ManageAdminServlet extends HttpServlet {
@@ -43,15 +47,19 @@ public class ManageAdminServlet extends HttpServlet {
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 //méthode d'ajout d'admin (un ou plusieurs)
         List<Customer> customerList = customerRepository.getAll();
-        request.getSession(true).setAttribute("customerList", customerList);
-        for (Customer customer : customerList) {
-            String setAdminValue = request.getParameter("setAdmin");
-            Boolean isAdmin = Boolean.parseBoolean(setAdminValue);
-            customer.setIsAdmin(isAdmin);
+        for (Customer customer : customerList){
+            String setAdminValue = request.getParameter("setAdmin"+customer.getId());
+
+            String username=customer.getUsername();
+            String email=customer.getEmail();
+            String password=customer.getPassword();
+            boolean isAdmin=customer.getIsAdmin();
+            if (setAdminValue!=null){
+                 isAdmin=true;
+            }
+            Customer updatedCustomer=new Customer(username,email,password,isAdmin);
+            customerRepository.update(updatedCustomer);
         }
-
-
-
 
         request.getRequestDispatcher("/WEB-INF/pages/manage.jsp").forward(request, response);
     }
